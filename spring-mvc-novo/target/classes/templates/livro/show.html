@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="br" xmlns:th="html://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Mostrar Livro</title>
+	</head>
+	<body>
+		<h4>id:</h4>
+		<h4 title="ID" th:text="${livro.id}">1</h4>
+		<h4>Nome:</h4>
+		<h4 th:text="${livro.nome}">Nome do Livro</h4>
+		<h4>Descrição</h4>
+		<h4 th:text="${livro.descricao}">Descrição do Livro</h4>
+		<a href="#" th:href="@{'/'}">voltar</a>
+	</body>
+</html>

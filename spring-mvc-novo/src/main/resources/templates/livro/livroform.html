@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="br" xmlns:th="html://www.thymeleaf.org">
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Livro Formulario</title>
+	</head>
+	<body>
+		<form th:object="${livro}" th:action="@{/livro/}" method="past">
+			<input type="hidden" th:field="*{id}"/>
+			<h1>Editar as Informações do Livro</h1>
+			<label>Nome do Livro:</label>
+			<input type="text" th:field="*{nome}"/>
+			<label>Descrição do Livro:</label>
+			<input type="text" th:field="*{descricao}"/>
+			<button type="submit">Submeter</button>
+		</form>
+		<a href="#" th:href="@{'/'}">Voltar</a>
+	</body>
+</html>
